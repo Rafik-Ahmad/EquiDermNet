@@ -164,11 +164,13 @@ See `requirements.txt`. Core dependencies:
 If you use this code in your research, please cite:
 
 ```bibtex
-@misc{equidermnet2025,
-  title   = {EquiDermNet: Equitable Skin Lesion Classification via Evidential Deep Learning and Adversarial Fairness},
-  author  = {<Your Name>},
-  year    = {2025},
-  url     = {https://github.com/<your-username>/EquiDermNet}
+@article{equidermnet2026,
+  title     = {EquiDermNet: A Bias-Mitigated, Uncertainty-Aware Framework for Melanoma Detection Across Diverse Skin Phototypes},
+  author    = {Rafik Ahmad, Kalyan Achariya, Arun Kumar Singh},
+  year      = {2026},
+  journal   = {International Journal of Imaging System Technology},
+  publisher = {Wiley},
+  url       = {https://github.com/Rafik-Ahmad/EquiDermNet}
 }
 ```
 
