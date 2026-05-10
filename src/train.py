@@ -12,7 +12,7 @@ from utils import edl_loss, orthogonality_loss, ResearchMetricsLogger
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def main():
-    print(f"🚀 Starting EquiDermNet Training on {device}")
+    print(f"Starting EquiDermNet Training on {device}")
     
     metadata = os.path.join(DATA_DIR, 'HAM10000_metadata.csv')
     train_loader, val_loader = get_loaders(BATCH_SIZE, DATA_DIR, metadata)
@@ -76,7 +76,7 @@ def main():
         
         # Manually check if LR changed to print it
         if epoch > 0 and metrics['LR'] < history[-2]['LR']:
-            print(f"  📉 Learning Rate reduced to {metrics['LR']:.1e}!")
+            print(f"Learning Rate reduced to {metrics['LR']:.1e}!")
         
         # Save Best Model Only
         if metrics['Global_AUC'] > best_auc:
@@ -88,7 +88,7 @@ def main():
     df = pd.DataFrame(history)
     csv_name = 'results_equiderm.csv' if LAMBDA_FAIR > 0 else 'results_baseline.csv'
     df.to_csv(os.path.join(LOG_DIR, csv_name), index=False)
-    print(f"✅ Training Complete. Best AUC: {best_auc:.4f}")
+    print(f"Training Complete. Best AUC: {best_auc:.4f}")
 
 if __name__ == '__main__':
     main()
