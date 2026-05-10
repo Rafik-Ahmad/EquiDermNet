@@ -72,7 +72,7 @@ equidermnet_local/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/EquiDermNet.git
+git clone https://github.com/Rafik-Ahmad/EquiDermNet.git
 cd EquiDermNet
 ```
 
